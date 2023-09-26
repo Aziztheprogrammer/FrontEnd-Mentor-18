@@ -1,0 +1,103 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Open sans", sans-serif;
+}
+
+/*Start The Project*/
+.container {
+	margin: auto;
+}
+
+/*Start Header*/
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 35px 10px;
+	font-family: "Raleway", sans-serif;
+}
+
+header ul li {
+	display: inline-block;
+	margin-left: 20px;
+	font-size: 0.9rem;
+}
+/*End Header*/
+
+/*Start Landing*/
+section.landing {
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+}
+
+section.landing .text {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 10px;
+	flex-direction: column;
+}
+
+section.landing .text h1 {
+	font-size: 2.5rem;
+	color: hsl(243, 87%, 12%);
+	font-family: "Raleway", sans-serif;
+	font-weight: 700;
+}
+
+section.landing .text p {
+	font-size: 1.2rem;
+	color: hsl(243, 87%, 12%);
+}
+
+section.landing form {
+	width: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+section.landing form input {
+	padding: 8px 15px;
+	border: #000 solid 1px;
+	flex-grow: 1;
+}
+
+section.landing form button {
+	background-color: hsl(224, 93%, 58%);
+	padding: 9px 25px;
+	color: white;
+}
+
+@media (max-width: 1024px) {
+	section.landing {
+		grid-template-columns: 90%;
+		justify-content: center;
+		gap: 25px;
+	}
+
+	section.landing .text {
+		order: 2;
+		text-align: center;
+		align-items: center;
+		gap: 20px;
+	}
+
+	section.landing .text h1 {
+		font-size: 2rem;
+	}
+
+	section.landing form {
+		flex-direction: column;
+		align-items: stretch;
+	}
+}
+/*End Landing*/
