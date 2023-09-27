@@ -72,13 +72,13 @@ section.landing form {
 	gap: 10px;
 }
 
-section.landing form input {
+section form input {
 	padding: 8px 15px;
 	border: #000 solid 1px;
 	flex-grow: 1;
 }
 
-section.landing form button {
+section form button {
 	background-color: hsl(224, 93%, 58%);
 	padding: 9px 25px;
 	color: white;
@@ -201,3 +201,59 @@ section.about .text .review .user p {
 	font-size: 0.7rem;
 }
 /*End About*/
+
+/*Start Early Access*/
+section.early-access {
+	padding: var(--section-padding) 10px;
+	background-color: hsl(238, 22%, 44%);
+	color: white;
+}
+
+section.early-access .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 150px;
+}
+
+section.early-access .container > div {
+	max-width: 550px;
+}
+
+section.early-access .container > div h1 {
+	font-family: "Raleway", sans-serif;
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+
+section.early-access .container > form {
+	flex-grow: 1;
+}
+
+section.early-access .container > form input {
+	padding: 15px 15px;
+	width: 100%;
+	border: none;
+	margin-bottom: 15px;
+	font-size: 0.8rem;
+}
+
+@media (max-width: 1024px) {
+	section.early-access .container {
+		justify-content: center;
+		gap: 50px;
+	}
+
+	section.early-access .container > div {
+		width: 100%;
+		text-align: center;
+	}
+
+	section.early-access .container > form button {
+		width: 100%;
+	}
+}
+
+/*End Early Access*/
