@@ -10,6 +10,10 @@ body {
 	font-family: "Open sans", sans-serif;
 }
 
+:root {
+	--section-padding: 100px;
+}
+
 /*Start The Project*/
 .container {
 	margin: auto;
@@ -33,8 +37,11 @@ header ul li {
 
 /*Start Landing*/
 section.landing {
+	padding: var(--section-padding) 10px;
 	display: grid;
 	grid-template-columns: repeat(2, 50%);
+	min-height: calc(100vh - 95px);
+	align-items: center;
 }
 
 section.landing .text {
@@ -45,14 +52,14 @@ section.landing .text {
 	flex-direction: column;
 }
 
-section.landing .text h1 {
-	font-size: 2.5rem;
+section .text > h1 {
+	font-size: 2.4rem;
 	color: hsl(243, 87%, 12%);
 	font-family: "Raleway", sans-serif;
 	font-weight: 700;
 }
 
-section.landing .text p {
+section .text > p {
 	font-size: 1.2rem;
 	color: hsl(243, 87%, 12%);
 }
@@ -84,14 +91,14 @@ section.landing form button {
 		gap: 25px;
 	}
 
-	section.landing .text {
+	section .text {
 		order: 2;
 		text-align: center;
-		align-items: center;
+		align-items: center !important;
 		gap: 20px;
 	}
 
-	section.landing .text h1 {
+	section .text > h1 {
 		font-size: 2rem;
 	}
 
@@ -101,3 +108,96 @@ section.landing form button {
 	}
 }
 /*End Landing*/
+
+/*Start About*/
+section.about {
+	background: url("images/bg-curve-desktop.svg") no-repeat center bottom;
+	background-size: cover;
+	padding: var(--section-padding) 10px;
+}
+
+section.about .container {
+	display: grid;
+	grid-template-columns: repeat(2, calc(50% - 20px));
+	align-items: center;
+	justify-items: center;
+	gap: 40px;
+}
+
+@media (max-width: 1024px) {
+	section.about .container {
+		grid-template-columns: 90%;
+		justify-content: center;
+		justify-items: center;
+		gap: 25px;
+	}
+
+	section.about .container > img {
+		max-width: 80%;
+	}
+
+	section.about .container .text {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 769px) {
+	section.about {
+		background: url("images/bg-curve-mobile.svg") no-repeat center bottom;
+		background-size: cover;
+	}
+}
+
+section.about .text > p {
+	margin: 20px 0px;
+}
+
+section.about .text a {
+	padding-bottom: 5px;
+	color: #3DA08F;
+	border-bottom: 1px solid #3DA08F;
+}
+
+section.about .text a img {
+	display: inline-block;
+	margin-left: 5px;
+	height: 20px;
+	width: auto;
+}
+
+section.about .text .review {
+	padding: 20px;
+	margin-top: 40px;
+	background-color: #fff;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 20px;
+	max-width: 400px;
+}
+
+section.about .text .review p {
+	font-size: 0.9rem;
+}
+
+section.about .text .review .user {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+section.about .text .review .user span,
+section.about .text .review .user p {
+	color: hsl(243, 87%, 12%);
+	font-family: "Raleway", sans-serif;
+}
+
+section.about .text .review .user span {
+	font-weight: 700;
+}
+
+section.about .text .review .user p {
+	font-size: 0.7rem;
+}
+/*End About*/
